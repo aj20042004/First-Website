@@ -1,11 +1,17 @@
-document.getElementById("submitButton").addEventListener("click", function () {
+document.getElementById("userForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
     const username = document.getElementById("username").value;
     const age = document.getElementById("age").value;
-    const output = document.getElementById("output");
-    
-    if (username && age) {
-        output.textContent = `Hello, ${username}! You are ${age} years old.`;
-    } else {
-        output.textContent = "Please enter your name and age.";
-    }
+
+    const response = await fetch('http://localhost:3000/saveUser', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, age }),
+    });
+
+    const result = await response.json();
+    document.getElementById("output").textContent = result.message || result.error;
 });
