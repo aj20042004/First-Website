@@ -4,6 +4,9 @@ const sql = require('mssql');
 
 const app = express();
 const port = 3000;
+const cors = require('cors');
+app.use(cors()); // Enable CORS
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -26,8 +29,13 @@ sql.connect(config)
     .then(() => console.log("Connected to Azure SQL Database"))
     .catch((err) => console.error("Database connection failed: ", err));
 
+    // Add a route for the root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the backend server!');
+});
+
 // API endpoint to save user data
-app.post('/saveUser', async (req, res) => {
+app.post('/', async (req, res) => {
     const { username, age } = req.body;
 
     if (!username || !age) {
