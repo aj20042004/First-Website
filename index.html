@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>First-Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">NEXT</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-</body>
+    <h1>This is a project to connect the Azure SQL database from the front-end</h1>
+    <form id="userForm">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <!-- Placeholder for displaying the output -->
+    <p id="output"></p>
+    
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+  </body>
 </html>
