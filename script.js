@@ -5,7 +5,7 @@ document.getElementById("userForm").addEventListener("submit", async function (e
     const age = document.getElementById("age").value;
 
     try {
-        const response = await fetch('http://localhost:3000/', {
+        const response = await fetch('http://192.168.1.107:3000/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
