@@ -5,7 +5,12 @@ const sql = require('mssql');
 const app = express();
 const port = 3000;
 const cors = require('cors');
-app.use(cors()); // Enable CORS
+const cors = require('cors');
+app.use(cors({
+    origin: '*', // Replace '*' with your frontend URL for better security
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}));
 
 
 // Middleware
