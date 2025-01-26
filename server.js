@@ -54,5 +54,5 @@ app.post('/', async (req, res) => {
     }
 });
 
-app.listen(port, '0.0.0.0', () => console.log(`Server running at http://192.168.1.107:${port}`));
+app.listen(port, '0.0.0.0', () => console.log(`Server running at http://20.81.201.118:${port}`));
 

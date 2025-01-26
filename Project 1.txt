@@ -24,4 +24,18 @@ a middleware
 Directory File:
 cd C:\Users\ajaishankar\OneDrive -essentialnetworktech.com\Desktop\First-Website\server.js
 
+# Laptop IPv4
 192.168.1.107
+
+# Connecting to virtual machine
+ssh ajaishankar@20.81.201.118
+password: Athu!2345678
+
+# Copying the contents from the local directory to azure 
+scp -r /c/Users/ajaishankar/OneDrive - essentialnetworktech.com/Desktop/First-Website ajaishankar@20.81.201.118:/home/ajaishankar/
+
+
+# Git repo
+git remote add origin https://github.com/aj20042004/First-Website.git
+
+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
